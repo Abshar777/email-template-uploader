@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { IoTrash } from "react-icons/io5";
 import {
   Card,
   CardContent,
@@ -245,7 +246,7 @@ export function EmailTemplateApp() {
                         </div>
                         <div className="flex items-center gap-2">
                           <Button
-                            variant="ghost"
+                            variant="destructive"
                             size="sm"
                             className="cursor-pointer"
                             onClick={(e) => {
@@ -255,7 +256,7 @@ export function EmailTemplateApp() {
                             }}
                             disabled={loading}
                           >
-                            Delete
+                            <IoTrash className="text-white/30 hover:text-white/60 "/>
                           </Button>
                         </div>
                       </div>
